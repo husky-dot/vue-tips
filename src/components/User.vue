@@ -1,19 +1,23 @@
 <template>
   <div>
-    <p>姓名：{{ name }}</p>
-    <p>职业：{{ job }}</p>
-    <p>年龄：{{ age }}</p>
+    <p>姓名：{{ userInfo.detail.name }}</p>
+    <p>职业：{{ userInfo.job }}</p>
+    <p>年龄：{{ userInfo.age }}</p>
   </div>
 </template>
 
-<script setup>
-import { ref } from "vue";
-
-defineProps({
-  name: String,
-  job: String,
-  age: Number,
-});
-
-const count = ref(0);
+<script>
+export default {
+  props: {
+    userInfo: Object,
+  },
+  watch: {
+    userInfo: {
+      handler() {
+        console.log("userInfo 的值发生变化了！");
+      },
+      deep: true,
+    },
+  },
+};
 </script>
