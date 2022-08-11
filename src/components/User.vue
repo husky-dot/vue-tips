@@ -15,5 +15,4 @@ defineProps({
   age: Number,
 });
 
-const count = ref(0);
 </script>
