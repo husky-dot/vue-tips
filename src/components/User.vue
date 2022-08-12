@@ -1,21 +1,12 @@
+// User.vue
 <template>
-  <div>
-    <p>私有数据:{{ privateData }}</p>
-    <p>私有数据(大写):{{ upperCasePrivateData }}</p>
+  <div class="user">
+    <slot />
   </div>
 </template>
 
-<script>
-export default {
-  data() {
-    return {
-      privateData: "secrecy",
-    };
-  },
-  computed: {
-    upperCasePrivateData() {
-      return this.privateData.toUpperCase();
-    },
-  },
-};
-</script>
+<style scoped>
+.user .userInfo {
+  color: red;
+}
+</style>
