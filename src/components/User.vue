@@ -10,14 +10,6 @@
 export default {
   props: {
     userInfo: Object,
-  },
-  watch: {
-    userInfo: {
-      handler() {
-        console.log("userInfo 的值发生变化了！");
-      },
-      deep: true,
-    },
-  },
+  }
 };
 </script>
