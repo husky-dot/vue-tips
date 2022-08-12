@@ -9,4 +9,12 @@
 .user .userInfo {
   color: red;
 }
+
+/* :slotted(.userInfo){
+  color: red;
+} */
+
+/* :global(.red) {
+  color: red;
+} */
 </style>
